@@ -1,5 +1,4 @@
 using System;
-using System.Net.Http.Headers;
 using System.Security.Cryptography;
 using System.Text;
 using API.Data;
@@ -8,7 +7,6 @@ using API.Entities;
 using API.Extensions;
 using API.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers;
