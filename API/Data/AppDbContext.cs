@@ -27,6 +27,9 @@ public class AppDbContext(DbContextOptions options) : IdentityDbContext<AppUser>
                 new IdentityRole { Id = "admin-id", Name = "Admin", NormalizedName = "ADMIN" }
             );
 
+        modelBuilder.Entity<Photo>()
+            .HasQueryFilter(x => x.IsApproved);
+
         modelBuilder.Entity<Message>()
             .HasOne(x => x.Recipient)
             .WithMany(m => m.MessagesReceived)
